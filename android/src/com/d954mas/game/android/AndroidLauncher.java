@@ -9,7 +9,7 @@ import com.d954mas.game.MyGame;
 public class AndroidLauncher extends AndroidApplication {
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+		super.onCreate(savedInstanceState);//
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 		initialize(new MyGame(new AndroidNativeApi()), config);
 	}
