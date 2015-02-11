@@ -1,0 +1,59 @@
+
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: 
+{ 
+  small: { file: font16.fnt },
+  middle: { file: font24.fnt },
+  big: { file: font32.fnt },
+  huge: { file: font64.fnt },
+  font: { file: font.fnt },
+},
+com.badlogic.gdx.graphics.Color: {
+    green: { a: 1, b: 0, g: 1, r: 0 },
+    white: { a: 1, b: 1, g: 1, r: 1 },
+    red: { a: 1, b: 0, g: 0, r: 1 },
+    black: { a: 1, b: 0, g: 0, r: 0 },
+    gray:{a:1,b:0.5,g:0.5,r:0.5},
+},
+com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle:
+{
+  loading:{background:barBackground,knob:barKnob
+  ,knobBefore:barKnob}
+},
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+    default: {up:button_up,down:button_down },
+    arrowLeft: {up:arrowLeft,down:arrowLeft },
+    arrowRight: {up:arrowRight,down:arrowRight },
+    restart: {up:restart},
+    close:{up: cross},
+},
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+    default: {up:button_up,down:button_down,font:middle, fontColor: white },
+    middleDialog: {fontColor: white ,overFontColor:red,font:font,fontColor:gray},
+},
+
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+    default: { vScroll: default-scroll, hScrollKnob: default-round, background: default-rect, hScroll: default-scroll, 
+    vScrollKnob: default-round}
+},
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+    default: { titleFont: middle, background: default-rect, titleFontColor: white },
+},
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+    default-horizontal: { background: default-scroll, knob: default-round },
+},
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+    default: { font: big, fontColor: white },
+    small: { font: small, fontColor: white },
+    middle: { font: font, fontColor: black },
+    middleHero: { font: font, fontColor: red },
+    big:{font:big, fontColor: white},
+},
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle:{
+	default:{ font: big, fontColor: white, background:default-rect, },
+}
+/*
+com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
+    default: { background: default-pane, knob: default-round-large }
+},*/
+}

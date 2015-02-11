@@ -1,0 +1,121 @@
+
+uiskin.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+arrowLeft
+  rotate: false
+  xy: 403, 422
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+arrowRight
+  rotate: false
+  xy: 613, 733
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+barBackground
+  rotate: false
+  xy: 743, 945
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+barKnob
+  rotate: false
+  xy: 505, 504
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+button_down
+  rotate: false
+  xy: 613, 965
+  size: 190, 45
+  orig: 190, 45
+  offset: 0, 0
+  index: -1
+button_up
+  rotate: false
+  xy: 1, 1
+  size: 190, 49
+  orig: 190, 49
+  offset: 0, 0
+  index: -1
+cross
+  rotate: false
+  xy: 533, 602
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+default-rect
+  rotate: false
+  xy: 403, 136
+  size: 80, 80
+  split: 7, 7, 5, 5
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+default-round
+  rotate: false
+  xy: 193, 12
+  size: 35, 38
+  split: 14, 14, 15, 18
+  orig: 35, 38
+  offset: 0, 0
+  index: -1
+default-scroll
+  rotate: false
+  xy: 805, 974
+  size: 38, 36
+  split: 11, 11, 7, 7
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+dialogBackground
+  rotate: false
+  xy: 1, 654
+  size: 610, 356
+  orig: 610, 356
+  offset: 0, 0
+  index: -1
+heroBorder
+  rotate: false
+  xy: 1, 52
+  size: 400, 600
+  orig: 400, 600
+  offset: 0, 0
+  index: -1
+home
+  rotate: false
+  xy: 403, 524
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+keyW
+  rotate: false
+  xy: 403, 320
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+restart
+  rotate: false
+  xy: 613, 835
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+round
+  rotate: false
+  xy: 403, 218
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
