@@ -1,0 +1,2 @@
+# template
+libgdx template project
