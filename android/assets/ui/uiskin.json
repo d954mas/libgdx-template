@@ -22,38 +22,32 @@ com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle:
 },
 com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
     default: {up:button_up,down:button_down },
-    arrowLeft: {up:arrowLeft,down:arrowLeft },
-    arrowRight: {up:arrowRight,down:arrowRight },
-    restart: {up:restart},
-    close:{up: cross},
 },
 com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
-    default: {up:button_up,down:button_down,font:middle, fontColor: white },
-    middleDialog: {fontColor: white ,overFontColor:red,font:font,fontColor:gray},
+    default: {up:button_up,down:button_down,font:middle, overFontColor:red, fontColor: white },
 },
 
 com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
-    default: { vScroll: default-scroll, hScrollKnob: default-round, background: default-rect, hScroll: default-scroll, 
-    vScrollKnob: default-round}
+    default: { vScroll: default_scroll, hScrollKnob: default_round, background: default_rect, hScroll: default_scroll, 
+    vScrollKnob: default_round}
 },
 com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
-    default: { titleFont: middle, background: default-rect, titleFontColor: white },
+    default: { titleFont: middle, background: default_rect, titleFontColor: white },
 },
 com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
-    default-horizontal: { background: default-scroll, knob: default-round },
+    default_horizontal: { background: default_scroll, knob: default_round },
 },
 com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
     default: { font: big, fontColor: white },
     small: { font: small, fontColor: white },
     middle: { font: font, fontColor: black },
-    middleHero: { font: font, fontColor: red },
     big:{font:big, fontColor: white},
 },
 com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle:{
-	default:{ font: big, fontColor: white, background:default-rect, },
+	default:{ font: big, fontColor: white, background:default_rect, },
 }
 /*
 com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
-    default: { background: default-pane, knob: default-round-large }
+    default: { background: default_pane, knob: default_round_large }
 },*/
 }
