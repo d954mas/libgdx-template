@@ -14,17 +14,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.d954mas.game.MyGame;
 import com.d954mas.game.utils.Assets;
 import com.d954mas.game.utils.Constants;
 public class SettingsScreen implements Screen {
 	public static final String TAG ="SettingsScreen";
-	private final MyGame game;
-	
 	private Stage stage;
 	
-	public SettingsScreen(MyGame game){
-		this.game=game;
+	public SettingsScreen(){
 		stage=new Stage(new FitViewport(Constants.WORLD_WIDTH,Constants.WORLD_HEIGHT));
 	}
 
@@ -51,31 +47,31 @@ public class SettingsScreen implements Screen {
 		btn.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				game.setScreen(game.screens.mainMenuScreen);
+				Assets.instance.game.setScreen(Assets.instance.game.screens.mainMenuScreen);
 			}	
 		});
 		btn.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT-600);
 		btn.setSize(300,200);
 		
 		final Slider musicSlider=new Slider(0f, 1f, 0.1f, false, Assets.instance.uiSkin);
-		musicSlider.setValue(Assets.instance.settings.getMusicVolume());
+		musicSlider.setValue(Assets.instance.audioManager.getMusicVolume());
 		musicSlider.setSize(300,150);
 		musicSlider.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT-200);
 		musicSlider.addListener(new ChangeListener() {
 			@Override
 			public void changed(ChangeEvent event, Actor actor) {
-				Assets.instance.settings.setMusicVolume(musicSlider.getValue());
+				Assets.instance.audioManager.setMusicVolume(musicSlider.getValue());
 			}
 		});
 		
 		final Slider soundSlider=new Slider(0f, 1f, 0.1f, false, Assets.instance.uiSkin);
-		soundSlider.setValue(Assets.instance.settings.getSoundVolume());
+		soundSlider.setValue(Assets.instance.audioManager.getSoundVolume());
 		soundSlider.setSize(300,150);
 		soundSlider.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT-400);
 		soundSlider.addListener(new ChangeListener() {
 			@Override
 			public void changed(ChangeEvent event, Actor actor) {
-				Assets.instance.settings.setSoundVolume(soundSlider.getValue());
+				Assets.instance.audioManager.setSoundVolume(soundSlider.getValue());
 			}
 		});
 		 

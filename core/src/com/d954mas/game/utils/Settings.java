@@ -30,17 +30,4 @@ public class Settings
 		Gdx.app.log(TAG, "Music volume:"+audioManager.getMusicVolume());
 		Gdx.app.log(TAG, "Sound volume:"+audioManager.getSoundVolume());
 	}
-	
-	public void setMusicVolume(float value){
-		audioManager.setMusicVolume(value);
-	}
-	public void setSoundVolume(float value){
-		audioManager.setSoundVolume(value);
-	}
-	public float getSoundVolume(){
-		return audioManager.getSoundVolume();
-	}
-	public float getMusicVolume(){
-		return audioManager.getMusicVolume();
-	}
 }

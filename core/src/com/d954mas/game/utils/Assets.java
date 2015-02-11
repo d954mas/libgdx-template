@@ -14,6 +14,7 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.ObjectMap;
 import com.badlogic.gdx.utils.ObjectMap.Entry;
+import com.d954mas.game.MyGame;
 
 public class Assets implements Disposable, AssetErrorListener{	
 	
@@ -25,6 +26,7 @@ public class Assets implements Disposable, AssetErrorListener{
 	public TextureAtlas atlas;// main atlas
 	public AudioManager audioManager;
 	public Settings settings;
+	public MyGame game;
 	private Assets(){}
 
 	@SuppressWarnings("rawtypes")
@@ -33,9 +35,10 @@ public class Assets implements Disposable, AssetErrorListener{
 		Gdx.app.error("Assets", "Could not load asset "+asset.fileName+" ",throwable);
 	}
 	
-	public void init(AssetManager assetManager){	
+	public void init(AssetManager assetManager,MyGame game){	
 		this.assetManager=assetManager;
 		assetManager.setErrorListener(this);
+		this.game=game;
 		
 		//loading
 	    assetManager.load("ui/uiskin.json", Skin.class);
@@ -51,19 +54,21 @@ public class Assets implements Disposable, AssetErrorListener{
 
 	}
 	private <T> void loadAllFromFolder(String name,Class<T> type){
-		    FileHandle dirHandle;
-		    if (Gdx.app.getType() == ApplicationType.Desktop) {
-		    	dirHandle = new FileHandle("./bin/"+name);
+		//DESKTOP NOT WORK ON DEPLOY
+		FileHandle dirHandle;
+		if (Gdx.app.getType() == ApplicationType.Desktop) {
+		    dirHandle = new FileHandle("./bin/"+name);
 		       
-		    } else {
-		    	dirHandle = Gdx.files.internal(name);
-		    }
+		} else {
+		    dirHandle = Gdx.files.internal(name);
+		}
 		    
-		    for (FileHandle entry: dirHandle.list()) {
-		       assetManager.load(entry.path(),type);
-		    }
+		for (FileHandle entry: dirHandle.list()) {
+		    assetManager.load(entry.path(),type);
+		}
 	}
 	public void initAssets(){	
+		Assets.instance.logAssetsInfo();
 		ObjectMap<String, Music>  music=new ObjectMap<String, Music>(); 
 		ObjectMap<String, Sound>  sound=new ObjectMap<String, Sound>(); 
 		atlas=assetManager.get("data/game.atlas");
@@ -73,7 +78,7 @@ public class Assets implements Disposable, AssetErrorListener{
 		assetManager.getAll(Music.class, musicArray);
 		//put music in map, key is music name
 		for(Music m:musicArray){	
-			music.put(assetManager.getAssetFileName(m).replaceAll("^.*/", ""), m);
+			music.put(assetManager.getAssetFileName(m).replaceAll("^.*/", "").replaceAll("\\..*", ""), m);
 		}
 		for(Entry<String, Music> entry: music.entries()){
 			Gdx.app.log(TAG, "Music: "+entry.key);
@@ -82,7 +87,7 @@ public class Assets implements Disposable, AssetErrorListener{
 		Array<Sound> soundArray=new Array<Sound>();
 		assetManager.getAll(Sound.class, soundArray);
 		for(Sound s:soundArray)	{	
-			sound.put(assetManager.getAssetFileName(s).replaceAll("^.*/", ""), s);
+			sound.put(assetManager.getAssetFileName(s).replaceAll("^.*/", "").replaceAll("\\..*", ""), s);
 		}
 		for(Entry<String, Sound> entry: sound.entries()){
 			Gdx.app.log(TAG, "Sound: "+entry.key);

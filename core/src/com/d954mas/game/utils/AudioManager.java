@@ -59,16 +59,16 @@ public class AudioManager {
 	{
 		music.get(name).stop();
 	}
-	protected float getSoundVolume() {
+	public float getSoundVolume() {
 		return soundVolume;
 	}
-	 protected void setSoundVolume(float soundVolume) {
+	public void setSoundVolume(float soundVolume) {
 		this.soundVolume = soundVolume;
 	}
-	 protected float getMusicVolume() {
+	 public float getMusicVolume() {
 		return musicVolume;
 	}
-	 protected void setMusicVolume(float musicVolume) {
+	 public void setMusicVolume(float musicVolume) {
 		this.musicVolume = musicVolume;
 	}
 	

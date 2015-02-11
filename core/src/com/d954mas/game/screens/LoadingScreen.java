@@ -7,18 +7,15 @@ import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.ProgressBar;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.d954mas.game.MyGame;
 import com.d954mas.game.utils.Assets;
 import com.d954mas.game.utils.Constants;
 
 public class LoadingScreen implements Screen{
 	private static final String TAG ="LoadingScreen";
-	private  final MyGame game;
 	
 	private Stage stage;
 	private ProgressBar bar;
-	public  LoadingScreen(MyGame game) {
-		this.game=game;
+	public  LoadingScreen() {
 		stage=new Stage(new FitViewport(Constants.WORLD_WIDTH,Constants.WORLD_HEIGHT));
 	}
 	
@@ -51,10 +48,10 @@ public class LoadingScreen implements Screen{
 			//	+" Bar loading:"+bar.getVisualValue());
 		if(bar.getVisualValue()==1)
 		{
-			Assets.instance.logAssetsInfo();//end loading
+			//end loading
 			Assets.instance.initAssets();
-			game.screens=new Screens(game);
-			game.setScreen(game.screens.mainMenuScreen);
+			Assets.instance.game.screens=new Screens();
+			Assets.instance.game.setScreen(Assets.instance.game.screens.mainMenuScreen);
 		}
 			
 		stage.draw();

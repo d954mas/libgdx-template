@@ -19,6 +19,5 @@ public class DesktopLauncher {
 		//settings.filterMin=TextureFilter.Linear;
 		TexturePacker.process(settings, "../Assets/game", "../android/assets/data", "game");
 		TexturePacker.process(settings, "../Assets/ui", "../android/assets/ui", "uiskin");
-		//TexturePacker.process(settings, "../Assets/room
 	}
 }

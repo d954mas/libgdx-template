@@ -45,9 +45,11 @@ com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
 },
 com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle:{
 	default:{ font: big, fontColor: white, background:default_rect, },
-}
-/*
+},
 com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
     default: { background: default_pane, knob: default_round_large }
-},*/
+},
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+    default-horizontal: { background: default_scroll, knob: default_round },
+},
 }

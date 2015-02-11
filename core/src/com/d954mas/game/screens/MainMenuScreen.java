@@ -8,18 +8,14 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.d954mas.game.MyGame;
 import com.d954mas.game.utils.Assets;
 import com.d954mas.game.utils.Constants;
 
 public class MainMenuScreen implements Screen {
 	public static final String TAG ="MainMenuScreen";
-	private final MyGame game;
-	
 	private Stage stage;
 	
-	public MainMenuScreen(MyGame game) {
-		this.game=game;
+	public MainMenuScreen() {
 		stage=new Stage(new FitViewport(Constants.WORLD_WIDTH,Constants.WORLD_HEIGHT));
 	}
 
@@ -56,7 +52,7 @@ public class MainMenuScreen implements Screen {
 		settingsBtn.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				game.setScreen(game.screens.settingsScreen);
+				Assets.instance.game.setScreen(Assets.instance.game.screens.settingsScreen);
 			}	
 		});
 		settingsBtn.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT/2-300);

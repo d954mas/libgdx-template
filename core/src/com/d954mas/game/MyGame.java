@@ -15,14 +15,13 @@ public class MyGame extends Game {
 	
 	public MyGame(NativeApi nativeAPI) {
 		this.nativeAPI=nativeAPI;
-		///sdfdsfsdfds
 	}
 	
 	@Override
 	public void create (){
 		Gdx.app.log(TAG,"create");
-		Assets.instance.init(new AssetManager());
-		setScreen(new LoadingScreen(this));
+		Assets.instance.init(new AssetManager(),this);
+		setScreen(new LoadingScreen());
 	}
 
 	@Override
