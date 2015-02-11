@@ -15,6 +15,7 @@ public class MyGame extends Game {
 	
 	public MyGame(NativeApi nativeAPI) {
 		this.nativeAPI=nativeAPI;
+		///sdfdsfsdfds
 	}
 	
 	@Override
