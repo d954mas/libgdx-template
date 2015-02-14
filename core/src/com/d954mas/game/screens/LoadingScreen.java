@@ -16,7 +16,7 @@ public class LoadingScreen implements Screen{
 	private Stage stage;
 	private ProgressBar bar;
 	public  LoadingScreen() {
-		stage=new Stage(new FitViewport(Constants.WORLD_WIDTH,Constants.WORLD_HEIGHT));
+		stage=new Stage(new FitViewport(Constants.VIEWPORT_WIDTH,Constants.VIEWPORT_HEIGHT));
 	}
 	
 	@Override
@@ -30,7 +30,7 @@ public class LoadingScreen implements Screen{
 		bar=new ProgressBar(0, 1, 0.01f, false, Assets.instance.uiSkin,"loading");
 		bar.setAnimateInterpolation(Interpolation.linear);
 		bar.setAnimateDuration(0.2f);
-		bar.setPosition(Constants.WORLD_WIDTH/2-250, Constants.WORLD_HEIGHT/2-100);
+		bar.setPosition(Constants.VIEWPORT_WIDTH/2-250, Constants.VIEWPORT_HEIGHT/2-100);
 		bar.setSize(500,200);
 		//add to stage
 		stage.addActor(bar);

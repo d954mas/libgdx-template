@@ -16,7 +16,7 @@ public class MainMenuScreen implements Screen {
 	private Stage stage;
 	
 	public MainMenuScreen() {
-		stage=new Stage(new FitViewport(Constants.WORLD_WIDTH,Constants.WORLD_HEIGHT));
+		stage=new Stage(new FitViewport(Constants.VIEWPORT_WIDTH,Constants.VIEWPORT_HEIGHT));
 	}
 
 	@Override
@@ -42,10 +42,10 @@ public class MainMenuScreen implements Screen {
 		playBtn.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-			
+				Assets.instance.game.setScreen(Assets.instance.game.screens.gameScreen);
 			}
 		});
-		playBtn.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT/2);
+		playBtn.setPosition(Constants.VIEWPORT_WIDTH/2-150, Constants.VIEWPORT_HEIGHT/2);
 		playBtn.setSize(300,200);
 		
 		TextButton settingsBtn=new TextButton("Settings",Assets.instance.uiSkin);
@@ -55,7 +55,7 @@ public class MainMenuScreen implements Screen {
 				Assets.instance.game.setScreen(Assets.instance.game.screens.settingsScreen);
 			}	
 		});
-		settingsBtn.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT/2-300);
+		settingsBtn.setPosition(Constants.VIEWPORT_WIDTH/2-150, Constants.VIEWPORT_HEIGHT/2-300);
 		settingsBtn.setSize(300,200);
 		
 		//add to stage

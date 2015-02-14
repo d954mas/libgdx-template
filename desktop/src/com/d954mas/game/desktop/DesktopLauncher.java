@@ -8,8 +8,6 @@ import com.d954mas.game.MyGame;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
-		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		new LwjglApplication(new MyGame(new DesktopNativeApi()), config);
 		Settings settings=new Settings();
 		settings.fast=true;
 		settings.duplicatePadding=true;
@@ -19,5 +17,9 @@ public class DesktopLauncher {
 		//settings.filterMin=TextureFilter.Linear;
 		TexturePacker.process(settings, "../Assets/game", "../android/assets/data", "game");
 		TexturePacker.process(settings, "../Assets/ui", "../android/assets/ui", "uiskin");
+		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		new LwjglApplication(new MyGame(new DesktopNativeApi()), config);
+	
+		
 	}
 }

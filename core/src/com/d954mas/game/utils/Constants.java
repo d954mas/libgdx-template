@@ -3,7 +3,6 @@ package com.d954mas.game.utils;
 
 public class Constants 
 {
-	public static final int WORLD_WIDTH=960,WORLD_HEIGHT=640;
-	public static final float WINDOWS_MOVE_BY=600,WINDOWS_MOVE_TIME=0.5f;
+	public static final int VIEWPORT_WIDTH=960,VIEWPORT_HEIGHT=640,WORLD_CAMERA_WIDTH=960,WORLD_CAMERA_HEIGHT=640;
 
 }

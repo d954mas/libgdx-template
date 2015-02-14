@@ -21,7 +21,7 @@ public class SettingsScreen implements Screen {
 	private Stage stage;
 	
 	public SettingsScreen(){
-		stage=new Stage(new FitViewport(Constants.WORLD_WIDTH,Constants.WORLD_HEIGHT));
+		stage=new Stage(new FitViewport(Constants.VIEWPORT_WIDTH,Constants.VIEWPORT_HEIGHT));
 	}
 
 	@Override
@@ -50,13 +50,13 @@ public class SettingsScreen implements Screen {
 				Assets.instance.game.setScreen(Assets.instance.game.screens.mainMenuScreen);
 			}	
 		});
-		btn.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT-600);
+		btn.setPosition(Constants.VIEWPORT_WIDTH/2-150, Constants.VIEWPORT_HEIGHT-600);
 		btn.setSize(300,200);
 		
 		final Slider musicSlider=new Slider(0f, 1f, 0.1f, false, Assets.instance.uiSkin);
 		musicSlider.setValue(Assets.instance.audioManager.getMusicVolume());
 		musicSlider.setSize(300,150);
-		musicSlider.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT-200);
+		musicSlider.setPosition(Constants.VIEWPORT_WIDTH/2-150, Constants.VIEWPORT_HEIGHT-200);
 		musicSlider.addListener(new ChangeListener() {
 			@Override
 			public void changed(ChangeEvent event, Actor actor) {
@@ -67,7 +67,7 @@ public class SettingsScreen implements Screen {
 		final Slider soundSlider=new Slider(0f, 1f, 0.1f, false, Assets.instance.uiSkin);
 		soundSlider.setValue(Assets.instance.audioManager.getSoundVolume());
 		soundSlider.setSize(300,150);
-		soundSlider.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT-400);
+		soundSlider.setPosition(Constants.VIEWPORT_WIDTH/2-150, Constants.VIEWPORT_HEIGHT-400);
 		soundSlider.addListener(new ChangeListener() {
 			@Override
 			public void changed(ChangeEvent event, Actor actor) {
@@ -76,9 +76,9 @@ public class SettingsScreen implements Screen {
 		});
 		 
 		Label musicLabel=new Label("Music", Assets.instance.uiSkin);
-		musicLabel.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT-100);
+		musicLabel.setPosition(Constants.VIEWPORT_WIDTH/2-150, Constants.VIEWPORT_HEIGHT-100);
 		Label soundLabel=new Label("Sound", Assets.instance.uiSkin);
-		soundLabel.setPosition(Constants.WORLD_WIDTH/2-150, Constants.WORLD_HEIGHT-300);
+		soundLabel.setPosition(Constants.VIEWPORT_WIDTH/2-150, Constants.VIEWPORT_HEIGHT-300);
 		
 		//add to stage
 		stage.addActor(btn);
