@@ -19,7 +19,9 @@ public class MyGame extends Game {
 	
 	@Override
 	public void create (){
+		Gdx.app.setLogLevel(Gdx.app.LOG_DEBUG);
 		Gdx.app.log(TAG,"create");
+		
 		Assets.instance.init(new AssetManager(),this);
 		setScreen(new LoadingScreen());
 	}

@@ -45,12 +45,16 @@ public class WorldRenderer implements Disposable {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.setProjectionMatrix(camera.combined);
 		batch.begin();
-		
+		viewport.update(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		//draw world
+		viewportHud.update(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
+		//draw gui
 		drawDebugGui(batch);
 		batch.end();
 		drawDebug();
 	}
 	public void drawDebug(){
+		viewport.update(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		debugRenderer.setColor(1, 0, 0, 1);
 		debugRenderer.setProjectionMatrix(camera.combined);
 		debugRenderer.begin();
